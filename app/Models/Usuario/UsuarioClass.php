@@ -1,8 +1,8 @@
 <?php
  
-namespace App\Models\Usuario;
+namespace App\Models\UsuarioGrupo;
  
-class UsuarioClass 
+class UsuarioGpClass 
 {
     /**
      * The table associated with the model.

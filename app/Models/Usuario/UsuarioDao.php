@@ -13,13 +13,13 @@ class UsuarioDao
      */
 
     public static function converter($data){
-        return new UsuarioClass($data);
+        return new UsuarioGpClass($data);
     }
 
     public static function converterMuitos($data){
         $usuario = [];
         foreach ($data as $dKey => $dValue) {
-            $usuario[$dKey] = new UsuarioClass($dValue);
+            $usuario[$dKey] = new UsuarioGpClass($dValue);
         }
         return $usuario;
     }

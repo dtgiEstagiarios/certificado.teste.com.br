@@ -2,9 +2,9 @@
  
 namespace App\Models\UsuarioGrupo;
  
-use App\Models\Usuario\UsuarioGpClass;
+use App\Models\UsuarioGrupo\UsuarioGpClass;
 
-class UsuarioDao 
+class UsuarioGpDao 
 {
     /**
      * The table associated with the model.
@@ -13,13 +13,13 @@ class UsuarioDao
      */
 
     public static function converter($data){
-        return new UsuarioClass($data);
+        return new UsuarioGpClass($data);
     }
 
     public static function converterMuitos($data){
         $usuario = [];
         foreach ($data as $dKey => $dValue) {
-            $usuario[$dKey] = new UsuarioClass($dValue);
+            $usuario[$dKey] = new UsuarioGpClass($dValue);
         }
         return $usuario;
     }

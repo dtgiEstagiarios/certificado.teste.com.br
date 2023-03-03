@@ -1,8 +1,8 @@
 <?php
  
-namespace App\Models\Usuario;
+namespace App\Models\UsuarioGrupo;
  
-class UsuarioClass 
+class UsuarioGpClass 
 {
     /**
      * The table associated with the model.
@@ -35,21 +35,21 @@ class UsuarioClass
     }
 
     private function setId($data){
-        $this->data['id'] = !empty($data['id_usuario']) ? $data['id_usuario'] : null;
+        $this->data['id'] = !empty($data['id_usuarioGrupo']) ? $data['id_usuarioGrupo'] : null;
     }
 
     private function setUuid($data){
-        $this->data['uuid'] = !empty($data['uuid_usuario']) ? $data['uuid_usuario'] : null;
+        $this->data['uuid'] = !empty($data['uuid_usuarioGrupo']) ? $data['uuid_usuarioGrupo'] : null;
         
     }
 
     private function setName($data){
-        $this->data['name'] = !empty($data['nm_usuario']) ? $data['nm_usuario'] : null;
+        $this->data['name'] = !empty($data['nm_usuarioGrupo']) ? $data['nm_usuarioGrupo'] : null;
         
     }
 
     private function setDesc($data){
-        $this->data['desc'] = !empty($data['ds_usuario']) ? $data['ds_usuario'] : null;
+        $this->data['desc'] = !empty($data['ds_usuarioGrupo']) ? $data['ds_usuarioGrupo'] : null;
         
     }
 

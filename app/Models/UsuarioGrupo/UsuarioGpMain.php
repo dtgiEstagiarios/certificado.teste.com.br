@@ -11,6 +11,6 @@ class UsuarioGpMain extends Model
      *
      * @var string
      */
-    protected $table = 'tb_usuarioGrupo';
+    protected $table = 'tb_grupousuario';
     protected $connection = 'teste';
 }
