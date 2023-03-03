@@ -11,10 +11,11 @@ class Listar extends Controller
     public function view() {
         $queryGpUsuario = new UsuarioGpPesquisa();
         $dataGpUsuario = $queryGpUsuario->pesquisa();
-        dd($dataGpUsuarioDao = UsuarioGpDao::converterMuitos($dataGpUsuario));
-        
-        dd($dataGpUsuario);
-        return view('sistema.usuarioGrupo.listar.view');
+        $dataGpUsuarioDao = UsuarioGpDao::converterMuitos($dataGpUsuario);
+
+        return view('sistema.usuarioGrupo.listar.view', [
+            'dataGpUsuarioDao'=> $dataGpUsuarioDao
+        ]);
     }
     
 }
