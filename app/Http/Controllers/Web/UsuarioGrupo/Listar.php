@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\Web\UsuarioGrupo;
 
 use App\Http\Controllers\Controller;
-use App\Models\Usuario\UsuarioGpPesquisa;
-use App\Models\Usuario\UsuarioGpDao;
+use App\Models\UsuarioGrupo\UsuarioGpPesquisa;
+use App\Models\UsuarioGrupo\UsuarioGpDao;
 
 class Listar extends Controller
 {
     public function view() {
-        $teste = 'aaaaa';
-
-        return view('sistema.usuario.listar.view', [
-            'teste'=>$teste
-        ]);
+        $queryGpUsuario = new UsuarioGpPesquisa();
+        $dataGpUsuario = $queryGpUsuario->pesquisa();
+        // $dataGpUsuarioDao = UsuarioDao::converterMuitos($dataUsuario);
+        dd($dataGpUsuario);
+        return view('sistema.usuarioGrupo.listar.view');
     }
     
 }
